@@ -199,8 +199,7 @@ INTERVAL signature. (Much of the implementation can be copied from
 MakeInterval above.) **Don't forget to specify the module type.**
 ......................................................................*)
 
-module MakeSafeInterval (Endpoint : ORDERED_TYPE) =
-  module MakeSafeInterval (Endpoint : ORDERED_TYPE) : INTERVAL =  (* The rest of the implementation is just as before. *)
+module MakeSafeInterval (Endpoint : ORDERED_TYPE) : INTERVAL =  (* The rest of the implementation is just as before. *)
   struct
   type endpoint = Endpoint.t
   type interval =
